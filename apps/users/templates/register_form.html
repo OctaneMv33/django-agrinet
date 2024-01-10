@@ -1,0 +1,18 @@
+{% extends 'base_template.html' %}
+
+{% block title %}Formulario de Registro{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="../static/styles/panel.css">
+{% endblock %}
+
+{% block main %}
+
+    <div>
+        <form method="POST">
+            {{form}}
+            <button>Hola</button>
+        </form>
+    </div>
+
+{% endblock %}
