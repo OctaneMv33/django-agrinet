@@ -1,14 +1,14 @@
 {% extends 'base_template.html' %}
-
+{% load static %}
 {% block title %}Formulario de Registro{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="../static/styles/panel.css">
+    <link rel="stylesheet" href="{% static 'styles/panel.css'%}">
 {% endblock %}
 
 {% block main %}
 
-    <div>
+    <div class="fondoCuadroRegistro">
         <form method="POST">
             {{form}}
             <button>Hola</button>
