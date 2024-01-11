@@ -9,10 +9,64 @@
 {% block main %}
 
     <div class="fondoCuadroRegistro">
-        <form method="POST">
-            {{form}}
-            <button>Hola</button>
-        </form>
+        <div class="row">
+            <div class="col-md-6">
+                <p style="color: white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vel voluptatum mollitia voluptas voluptatibus, quo, consequuntur, ab pariatur voluptates id perferendis at! Autem alias id earum adipisci? Tempore, temporibus earum.</p>
+            </div>
+            <div class="col-md-6 fondoFormularioRegistro">
+                <div id="registerFormTitle">
+                    <h1><b>Formulario de Registro</b></h1>
+                </div>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="row lineBreak">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{form.first_name.label_tag}}
+                                {{form.first_name}}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{form.last_name.label_tag}}
+                                {{form.last_name}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row lineBreak">
+                        <div class="col-md-6">
+                            {{form.dni.label_tag}}
+                            <div class="col-md-6">
+                                {{form.dni}}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            {{form.address.label_tag}}
+                            {{form.address}}
+                        </div>
+                    </div>
+                    <div class="row lineBreak">
+                        <div class="col-md-6">
+                            {{form.email.label_tag}}
+                            {{form.email}}
+                        </div>
+                        <div class="col-md-6">
+                            {{form.password.label_tag}}
+                            {{form.password}}
+                        </div>
+                    </div>
+                    <div class="row lineBreak">
+                        <div class="col-md-6">
+                            {{form.phonenumber.label_tag}}
+                            {{form.phonenumber}}
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btnRegister"><b>Registrarse</b></button>
+                        </div>                        
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
 {% endblock %}
